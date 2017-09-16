@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/shauli.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        <h1>Ha-Blog Shel Shauli</h1>
+    </header>
+    <nav>
+        <!-- Navigation -->
+        <ul>
+            <li>@Html.ActionLink("Blog", "Index", "Blog")</li>
+            <li>@Html.ActionLink("Fan Club", "Index", "FansClub")</li>
+            <li><a>Contact</a></li>
+            <li class="subscribe"><a>Subscribe via. RSS</a></li>
+        </ul>
+    </nav>
+    <section id="intro">
+        <!-- Introduction -->
+        <header>
+            <h2>Do you have questions for me?</h2>
+        </header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+        <img src="@Url.Content("~/Content/Images/intro_shauli.png")" alt="Shauli" />
+    </section>
+    <audio controls autoplay>
+        <source src="@Url.Content("~/Content/Images/song.mp3")" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+    <div id="content">
+        <div id="mainContent">
+            @RenderBody()
+        </div>
+        <aside>
+            <section>
+                <header>
+                    <h3>Categories</h3>
+                </header>
+                <ul>
+                    <li><a href="#">Lorem ipsum dolor</a></li>
+                    <li><a href="#">Sit amet consectetur</a></li>
+                    <li><a href="#">Adipisicing elit sed</a></li>
+                </ul>
+            </section>
+            <section>
+                <header>
+                    <h3>Archives</h3>
+                </header>
+                <ul>
+                    <li><a href="#">December 2008</a></li>
+                    <li><a href="#">January 2009</a></li>
+                    <li><a href="#">February 2009</a></li>
+                    <li><a href="#">March 2009</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+    <footer>
+        <!-- Footer -->
+        <div>
+            <section id="about">
+                <header>
+                    <h3>About</h3>
+                </header>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la</p>
+            </section>
+            <section id="blogroll">
+                <header>
+                    <h3>Blogroll</h3>
+                </header>
+                <ul>
+                    <li><a href="#">NETTUTS+</a></li>
+                    <li><a href="#">FreelanceSwitch</a></li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
