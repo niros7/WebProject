@@ -1,5 +1,4 @@
 using System;
-using System.Data.Entity;
 
 namespace test.Models
 {
@@ -11,10 +10,5 @@ namespace test.Models
         public bool IsFemale { get; set; }
         public DateTime BirthDate { get; set; }
         public int Seniority { get; set; }
-    }
-
-    public class FansClubDBContext : DbContext
-    {
-        public DbSet<Fan> Fans { get; set; }
     }
 }
