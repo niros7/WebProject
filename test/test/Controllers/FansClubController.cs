@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
+using test.DAL;
 using test.Models;
 
 namespace test.Controllers
 {
     public class FansClubController : Controller
     {
-        private FansClubDBContext db = new FansClubDBContext();
+        private ShauliContext db = new ShauliContext();
 
         // GET: FansClub
         public ActionResult Index()
