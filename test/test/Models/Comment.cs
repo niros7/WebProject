@@ -2,11 +2,12 @@
 {
     public class Comment
     {
-        public int Id { get; set; }
-        public Post Post { get; set; }
+        public int CommentId { get; set; }
         public string Title { get; set; }
-        public Fan Fan { get; set; }
         public string SiteUrl { get; set; }
         public string Description { get; set; }
+
+        public Fan Fan { get; set; }
+        public Post ReferencedPost { get; set; }
     }
 }
